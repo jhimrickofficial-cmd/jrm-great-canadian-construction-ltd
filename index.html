@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Great Canadian Construction Ltd | General Contractor Ontario</title>
+<!-- Tailwind CSS CDN with Forms & Container Queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              charcoal: '#111714',
+              forest: '#1b2e23',
+              pine: '#243b2e',
+              amber: '#d97706',
+              surface: '#fbfbf9',
+              lightGray: '#f1f1ee',
+              cardDark: '#121814',
+              borderDark: '#233027'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- CSS Styling: Core Layout & Effects -->
+<style data-purpose="layout-and-interactions">
+    body {
+      background-color: #fbfbf9;
+      color: #1a201c;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .text-balance {
+      text-wrap: balance;
+    }
+    /* Subtle custom card focus states */
+    .service-item.active {
+      border-color: #1b2e23;
+      background-color: #ffffff;
+    }
+    .accordion-content {
+      transition: max-height 0.3s ease-out, opacity 0.3s ease;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-brand-amber selection:text-white">
+<!-- BEGIN: Navigation Header -->
+<header class="sticky top-0 z-50 bg-[#fbfbf9]/95 backdrop-blur-md border-b border-gray-200/80 transition-all">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-20">
+<!-- Brand Logo -->
+<a aria-label="Great Canadian Construction Ltd Home" class="flex items-center space-x-3 group" href="#home">
+<div class="w-48 sm:w-56 transition-transform group-hover:scale-[1.02]">
+<svg class="w-full h-auto" fill="none" viewbox="0 0 280 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 36L24 12L36 36H30L24 23L18 36H12Z" fill="#1b2e23"></path>
+<path d="M24 16L27 24H21L24 16Z" fill="#d97706"></path>
+<path d="M24 8L26.5 13H21.5L24 8Z" fill="#1b2e23"></path>
+<path d="M6 36H42V38H6V36Z" fill="#1b2e23"></path>
+<text fill="#111827" font-family="'Plus Jakarta Sans', sans-serif" font-size="15" font-weight="800" letter-spacing="1.2" x="50" y="24">GREAT CANADIAN</text>
+<text fill="#6b7280" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="600" letter-spacing="2.8" x="50.5" y="37">CONSTRUCTION LTD</text>
+</svg>
+</div>
+</a>
+<!-- Desktop Navigation Links -->
+<nav aria-label="Main Navigation" class="hidden lg:flex items-center space-x-7 text-sm font-semibold text-gray-700 tracking-tight">
+<a class="hover:text-brand-forest transition-colors py-1" href="#home">Home</a>
+<a class="hover:text-brand-forest transition-colors py-1" href="#about">About</a>
+<a class="hover:text-brand-forest transition-colors py-1" href="#services">Services</a>
+<a class="hover:text-brand-forest transition-colors py-1" href="#process">Process</a>
+<a class="hover:text-brand-forest transition-colors py-1" href="#projects">Projects</a>
+<a class="hover:text-brand-forest transition-colors py-1" href="#pricing">Estimates</a>
+<a class="hover:text-brand-forest transition-colors py-1" href="#faq">FAQ</a>
+<a class="hover:text-brand-forest transition-colors py-1" href="#contact">Contact</a>
+</nav>
+<!-- Header Actions: Direct Call & Primary CTA -->
+<div class="hidden sm:flex items-center space-x-4">
+<a class="inline-flex items-center gap-2 text-sm font-bold text-brand-forest px-3 py-2 rounded-full hover:bg-black/5 transition-colors" href="tel:+19058560444" title="Call Great Canadian Construction">
+<svg class="w-4 h-4 text-brand-amber" fill="currentColor" viewbox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"></path></svg>
+            (905) 856-0444
+          </a>
+<a class="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-charcoal text-white hover:bg-brand-pine transition-all duration-200 shadow-sm" href="#contact">
+            Get an Estimate
+          </a>
+</div>
+<!-- Mobile Menu Trigger -->
+<button aria-label="Toggle navigation menu" class="lg:hidden p-2 text-gray-700 hover:text-black focus:outline-none" id="mobileMenuBtn" type="button">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+</div>
+<!-- Mobile Dropdown Navigation -->
+<div class="hidden lg:hidden border-t border-gray-200 bg-white px-6 py-5 shadow-lg" id="mobileMenu">
+<div class="flex flex-col space-y-3 font-semibold text-sm">
+<a class="mobile-nav-link text-gray-800 hover:text-brand-forest" href="#home">Home</a>
+<a class="mobile-nav-link text-gray-800 hover:text-brand-forest" href="#about">About Us</a>
+<a class="mobile-nav-link text-gray-800 hover:text-brand-forest" href="#services">Services</a>
+<a class="mobile-nav-link text-gray-800 hover:text-brand-forest" href="#process">Construction Process</a>
+<a class="mobile-nav-link text-gray-800 hover:text-brand-forest" href="#projects">Featured Projects</a>
+<a class="mobile-nav-link text-gray-800 hover:text-brand-forest" href="#pricing">Estimates &amp; Pricing</a>
+<a class="mobile-nav-link text-gray-800 hover:text-brand-forest" href="#faq">FAQ</a>
+<a class="mobile-nav-link text-gray-800 hover:text-brand-forest" href="#contact">Contact &amp; Hours</a>
+<div class="pt-3 flex flex-col gap-2">
+<a class="text-center font-bold text-brand-forest py-2 bg-gray-50 rounded-lg border border-gray-200" href="tel:+19058560444">Call (905) 856-0444</a>
+<a class="text-center font-bold text-white py-2.5 bg-brand-charcoal rounded-lg" href="#contact">Get an Estimate</a>
+</div>
+</div>
+</div>
+</header>
+<!-- END: Navigation Header -->
+<main>
+<!-- BEGIN: Hero Section -->
+<section class="relative pt-8 pb-16 lg:pt-14 lg:pb-24 overflow-hidden" data-purpose="hero-section" id="home">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Top Badge matching Electrio style -->
+<div class="flex items-center gap-2 mb-6">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase bg-brand-pine/10 text-brand-pine border border-brand-pine/20">
+<span class="w-1.5 h-1.5 rounded-full bg-brand-amber"></span>
+            Licensed &amp; Insured General Contractor • Ontario, Canada
+          </span>
+</div>
+<!-- Headline & Split Intro -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-10">
+<div class="lg:col-span-8">
+<h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-brand-charcoal tracking-tight leading-[1.1] text-balance">
+              Precision General Contracting for Canadian Homes &amp; Commercial Builds.
+            </h1>
+</div>
+<div class="lg:col-span-4 lg:pl-6">
+<p class="text-base text-gray-600 leading-relaxed mb-6 font-normal">
+              From architectural blueprint analysis to turnkey execution, Great Canadian Construction Ltd delivers high-integrity craftsmanship across Ontario with complete timeline transparency.
+            </p>
+<div class="flex flex-wrap items-center gap-3">
+<a class="px-6 py-3 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-charcoal text-white hover:bg-brand-pine transition-all shadow-md" href="#contact">
+                Request a Quote
+              </a>
+<a class="px-6 py-3 rounded-full text-xs font-bold uppercase tracking-wider bg-white text-gray-800 border border-gray-300 hover:bg-gray-50 transition-all" href="#services">
+                Our Services
+              </a>
+</div>
+</div>
+</div>
+<!-- Hero Visual Display (Matching Electrio Hero Image Container) -->
+<div class="relative rounded-3xl overflow-hidden shadow-2xl border border-gray-200">
+<img alt="Great Canadian Construction master builder team reviewing architectural blueprints in Ontario" class="w-full h-[380px] sm:h-[500px] lg:h-[620px] object-cover object-center" loading="eager" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBK_nuznFjtW72xkyZz8Chew4GB7eaep14q1HRmPKh3qtsI_qWDSXeIzvZ05Owzi1zrXmKMgKlLwo2Dk4ST3DLg7JM0HMBgmoBZmHgN-wSWl7jaaUFUFIP_llL-ctoSjZO6Ja1tc9Q3gYbSHdTlXmKoSp7TkajyRh4u8LyQZ1YxTMwWvVcsQ6i-5yDSJ1w0QwCmL-SKEwbMGHSGTbAJWBqi2Io0n5yzV3a-cIlk_hCP__D6Q_HdtMc4Zw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<!-- Bottom floating badge inside the hero card -->
+<div class="absolute bottom-6 left-6 right-6 sm:bottom-10 sm:left-10 sm:right-auto max-w-md bg-brand-cardDark/90 backdrop-blur-md p-6 rounded-2xl border border-white/10 text-white">
+<div class="flex items-center gap-3 mb-2">
+<span class="inline-block px-2.5 py-0.5 rounded bg-brand-amber text-[10px] font-extrabold tracking-wider uppercase text-black">Master Builders</span>
+<span class="text-xs text-gray-300">Ontario Building Code Compliant</span>
+</div>
+<h3 class="text-lg font-bold text-white mb-1">Architectural Blueprint &amp; Site Coordination</h3>
+<p class="text-xs text-gray-300 leading-relaxed">
+              Full-scale general contracting, framing, structural modifications, and commercial tenant turnkeys handled directly by certified construction leaders.
+            </p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Hero Section -->
+<!-- BEGIN: About & Key Stats Section -->
+<section class="py-16 lg:py-24 bg-white border-y border-gray-200/70" data-purpose="about-and-metrics" id="about">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Small Section Eyebrow -->
+<div class="text-xs font-bold uppercase tracking-widest text-gray-500 mb-3">
+          • About Great Canadian Construction
+        </div>
+<!-- Big Bold Mission Statement (Electrio Cadence) -->
+<div class="max-w-4xl mb-14">
+<h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-charcoal leading-snug tracking-tight text-balance">
+            We provide engineered general contracting solutions with a steadfast focus on structural integrity, strict site safety, and architectural refinement for Canadian homeowners and commercial developers.
+          </h2>
+</div>
+<!-- 4-Column Stat Cards matching dark/light aesthetic -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Stat 1 -->
+<div class="bg-[#fbfbf9] p-8 rounded-2xl border border-gray-200 flex flex-col justify-between hover:shadow-lg transition-all duration-300">
+<div>
+<span class="text-4xl sm:text-5xl font-extrabold text-brand-charcoal tracking-tight">15+</span>
+<p class="text-xs font-bold uppercase tracking-wider text-gray-500 mt-2">Years of Mastery</p>
+</div>
+<p class="text-xs text-gray-600 mt-6 leading-relaxed">
+              Delivering high-end framing, structural expansions, and premium Canadian masonry.
+            </p>
+</div>
+<!-- Stat 2 (Featured Dark Card) -->
+<div class="bg-brand-cardDark text-white p-8 rounded-2xl border border-brand-borderDark flex flex-col justify-between shadow-xl">
+<div>
+<div class="flex items-center justify-between">
+<span class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight">350+</span>
+<span class="w-3 h-3 rounded-full bg-brand-amber"></span>
+</div>
+<p class="text-xs font-bold uppercase tracking-wider text-gray-300 mt-2">Completed Builds</p>
+</div>
+<p class="text-xs text-gray-300 mt-6 leading-relaxed">
+              Successful residential custom homes and multi-story commercial spaces delivered on schedule.
+            </p>
+</div>
+<!-- Stat 3 -->
+<div class="bg-[#fbfbf9] p-8 rounded-2xl border border-gray-200 flex flex-col justify-between hover:shadow-lg transition-all duration-300">
+<div>
+<span class="text-4xl sm:text-5xl font-extrabold text-brand-charcoal tracking-tight">100%</span>
+<p class="text-xs font-bold uppercase tracking-wider text-gray-500 mt-2">Permit &amp; Code Compliance</p>
+</div>
+<p class="text-xs text-gray-600 mt-6 leading-relaxed">
+              Zero tolerance for shortcuts. All builds rigorously meet or surpass Ontario structural codes.
+            </p>
+</div>
+<!-- Stat 4 -->
+<div class="bg-[#fbfbf9] p-8 rounded-2xl border border-gray-200 flex flex-col justify-between hover:shadow-lg transition-all duration-300">
+<div>
+<span class="text-4xl sm:text-5xl font-extrabold text-brand-charcoal tracking-tight">Mon-Sat</span>
+<p class="text-xs font-bold uppercase tracking-wider text-gray-500 mt-2">7:00 AM – 7:00 PM</p>
+</div>
+<p class="text-xs text-gray-600 mt-6 leading-relaxed">
+              Direct access to lead site superintendents and rapid response project dispatching.
+            </p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: About & Key Stats Section -->
+<!-- BEGIN: Core Services Section -->
+<section class="py-16 lg:py-24 bg-[#fbfbf9]" data-purpose="services-showcase" id="services">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-xs font-bold uppercase tracking-widest text-gray-500 mb-3">
+          • Services &amp; Specializations
+        </div>
+<div class="flex flex-col lg:flex-row lg:items-end justify-between mb-12">
+<h2 class="text-3xl sm:text-4xl font-extrabold text-brand-charcoal tracking-tight max-w-xl">
+            Complete turnkey general contracting solutions for residential &amp; commercial builds.
+          </h2>
+<p class="text-sm text-gray-600 max-w-md mt-4 lg:mt-0">
+            We operate as single-source general contractors, managing architectural drawings, municipal permits, excavation, structural framing, and final finishing.
+          </p>
+</div>
+<!-- 2-Column Interactive / Showcase Split Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Services List / Selector Column -->
+<div class="lg:col-span-5 space-y-3">
+<!-- Service 1 -->
+<div class="service-item bg-white p-5 rounded-2xl border border-gray-200 shadow-sm cursor-pointer transition-all hover:border-brand-pine">
+<div class="flex items-center justify-between">
+<span class="text-sm font-bold text-brand-charcoal">01. Comprehensive General Contracting</span>
+<span class="text-xs text-brand-amber font-mono font-bold">Turnkey</span>
+</div>
+<p class="text-xs text-gray-600 mt-2 leading-relaxed">
+                Full site management, sub-trade oversight, milestone schedules, and Ontario municipal permit clearance from foundation to finish.
+              </p>
+</div>
+<!-- Service 2 -->
+<div class="service-item bg-white p-5 rounded-2xl border border-gray-200 shadow-sm cursor-pointer transition-all hover:border-brand-pine">
+<div class="flex items-center justify-between">
+<span class="text-sm font-bold text-brand-charcoal">02. Custom Architectural Residential Builds</span>
+<span class="text-xs text-gray-400 font-mono font-bold">Custom</span>
+</div>
+<p class="text-xs text-gray-600 mt-2 leading-relaxed">
+                High-end modern Canadian residences engineered with stone masonry, timber accents, metal roof profiles, and floor-to-ceiling glass systems.
+              </p>
+</div>
+<!-- Service 3 -->
+<div class="service-item bg-white p-5 rounded-2xl border border-gray-200 shadow-sm cursor-pointer transition-all hover:border-brand-pine">
+<div class="flex items-center justify-between">
+<span class="text-sm font-bold text-brand-charcoal">03. Commercial Fit-Outs &amp; Developments</span>
+<span class="text-xs text-gray-400 font-mono font-bold">Commercial</span>
+</div>
+<p class="text-xs text-gray-600 mt-2 leading-relaxed">
+                Mixed-use retail shells, corporate office fit-outs, structural retrofitting, and tenant leasehold improvements built to commercial spec.
+              </p>
+</div>
+<!-- Service 4 -->
+<div class="service-item bg-white p-5 rounded-2xl border border-gray-200 shadow-sm cursor-pointer transition-all hover:border-brand-pine">
+<div class="flex items-center justify-between">
+<span class="text-sm font-bold text-brand-charcoal">04. Structural Renovations &amp; Expansions</span>
+<span class="text-xs text-gray-400 font-mono font-bold">Structural</span>
+</div>
+<p class="text-xs text-gray-600 mt-2 leading-relaxed">
+                Load-bearing wall removal, steel beam retrofitting, second-story vertical additions, and exterior envelope modernization.
+              </p>
+</div>
+</div>
+<!-- Featured Service Showcase Image (Electrio Style right-hand display) -->
+<div class="lg:col-span-7">
+<div class="relative rounded-3xl overflow-hidden shadow-xl border border-gray-200 bg-white">
+<img alt="Luxury modern custom Canadian building exterior built by Great Canadian Construction Ltd" class="w-full h-[450px] sm:h-[520px] object-cover" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeKM0l7iFu-Xxam6kxDu7mf5XmNjWF_UvvTgumVolFvsEKJjcwLNpDJgHPrObK-1yUmTweso8Cf8ij29Z5V3a7rhRaMjir-wdw7tkvZnS9yPT67tCbHvw4_BPpzELpPei-JC2zWbUOdI-dmdpV5h3HWxFUYBBSoZJ7dZu6GvgSIA9zYwLWfLb3gOGvIGBjI3XXAKFX4QIQGDh7KDtZRyrAClCrtJ3SsOFXCsVtRUieDXmIt0pjoWxrEA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<!-- Floating service summary card -->
+<div class="absolute bottom-6 left-6 right-6 p-6 rounded-2xl bg-brand-charcoal/90 backdrop-blur-md border border-white/10 text-white">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs font-bold text-brand-amber uppercase tracking-wider">Showcase Standard</span>
+<span class="text-xs text-gray-300">Ontario, Canada</span>
+</div>
+<h4 class="text-lg font-bold">Commercial &amp; Multi-Unit Construction Excellence</h4>
+<p class="text-xs text-gray-300 mt-1 leading-relaxed">
+                  Precision engineered timber balconies, limestone cladding, structural glass railings, and expansive daylight layouts.
+                </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Core Services Section -->
+<!-- BEGIN: Proven Construction Process Section -->
+<section class="py-16 lg:py-24 bg-white border-t border-gray-200" data-purpose="process-timeline" id="process">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<div class="text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">
+            • Our Working Process
+          </div>
+<h2 class="text-3xl sm:text-4xl font-extrabold text-brand-charcoal tracking-tight">
+            Our proven construction &amp; general contracting process
+          </h2>
+<p class="text-sm text-gray-600 mt-3">
+            Every build follows a strict four-phase methodology ensuring budget compliance, safety clearance, and zero surprises at handover.
+          </p>
+</div>
+<!-- 4 Step Sequential Process Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Step 1 -->
+<div class="bg-[#fbfbf9] p-7 rounded-3xl border border-gray-200 flex flex-col justify-between hover:-translate-y-1 transition-transform duration-200">
+<div>
+<span class="text-4xl font-black text-brand-amber font-mono">01</span>
+<h3 class="text-lg font-bold text-brand-charcoal mt-4 mb-2">Initial Site Consultation</h3>
+<p class="text-xs text-gray-600 leading-relaxed">
+                We meet on-site in Ontario or review your blueprints to define spatial needs, zoning feasibility, and realistic preliminary budget envelopes.
+              </p>
+</div>
+<div class="mt-8 pt-4 border-t border-gray-200 flex items-center justify-between text-[11px] font-semibold text-gray-500">
+<span>Duration: 1–3 Days</span>
+<span class="text-brand-forest">Stage 1</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="bg-[#fbfbf9] p-7 rounded-3xl border border-gray-200 flex flex-col justify-between hover:-translate-y-1 transition-transform duration-200">
+<div>
+<span class="text-4xl font-black text-brand-amber font-mono">02</span>
+<h3 class="text-lg font-bold text-brand-charcoal mt-4 mb-2">Permits &amp; Scope Audit</h3>
+<p class="text-xs text-gray-600 leading-relaxed">
+                Detailed line-item estimating, engineering sign-offs, and submitting applications to Ontario municipal building departments for full clearance.
+              </p>
+</div>
+<div class="mt-8 pt-4 border-t border-gray-200 flex items-center justify-between text-[11px] font-semibold text-gray-500">
+<span>Duration: 2–4 Weeks</span>
+<span class="text-brand-forest">Stage 2</span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="bg-[#fbfbf9] p-7 rounded-3xl border border-gray-200 flex flex-col justify-between hover:-translate-y-1 transition-transform duration-200">
+<div>
+<span class="text-4xl font-black text-brand-amber font-mono">03</span>
+<h3 class="text-lg font-bold text-brand-charcoal mt-4 mb-2">Turnkey Construction</h3>
+<p class="text-xs text-gray-600 leading-relaxed">
+                Active execution by our vetted trades, daily site management, safety compliance, milestone photo reporting, and proactive scheduling.
+              </p>
+</div>
+<div class="mt-8 pt-4 border-t border-gray-200 flex items-center justify-between text-[11px] font-semibold text-gray-500">
+<span>Duration: Per Schedule</span>
+<span class="text-brand-forest">Stage 3</span>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="bg-[#fbfbf9] p-7 rounded-3xl border border-gray-200 flex flex-col justify-between hover:-translate-y-1 transition-transform duration-200">
+<div>
+<span class="text-4xl font-black text-brand-amber font-mono">04</span>
+<h3 class="text-lg font-bold text-brand-charcoal mt-4 mb-2">Final Inspection &amp; Warranty</h3>
+<p class="text-xs text-gray-600 leading-relaxed">
+                Thorough walkthrough, final occupancy certification from municipal inspectors, comprehensive documentation, and warranty packages.
+              </p>
+</div>
+<div class="mt-8 pt-4 border-t border-gray-200 flex items-center justify-between text-[11px] font-semibold text-gray-500">
+<span>Full Handover</span>
+<span class="text-brand-forest">Guaranteed</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Proven Construction Process Section -->
+<!-- BEGIN: Featured Projects Section -->
+<section class="py-16 lg:py-24 bg-brand-charcoal text-white" data-purpose="featured-projects" id="projects">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between mb-12">
+<div>
+<div class="text-xs font-bold uppercase tracking-widest text-brand-amber mb-2">
+              • Our Portfolio
+            </div>
+<h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
+              Quality Canadian projects you can trust
+            </h2>
+</div>
+<p class="text-xs sm:text-sm text-gray-400 max-w-sm mt-3 sm:mt-0">
+            A small glimpse into recent custom residences, multi-family construction, and modern commercial builds across Ontario and eastern Canada.
+          </p>
+</div>
+<!-- 2 Large Feature Project Cards matching Electrio Cadence -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- Project 1 -->
+<div class="group bg-[#161d19] rounded-3xl overflow-hidden border border-[#26352c] transition-all hover:border-brand-amber/60 flex flex-col">
+<div class="relative overflow-hidden aspect-[16/10]">
+<img alt="Luxury modern custom stone and timber home completed by Great Canadian Construction" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida/AEtjO1VY5tB9yp9gOgi3RcaBIEmE4BjoGxwfxEebDwbrxH7OPOfsCDCMLvpma_fDqopxJiOFOIsno37ERGXQESS_2ytuh5at7Z1iLpGNOs8GgyiKiWP-lphmir__srvpNKrjZ_ZIPUfyQSxrjV4KKD11AAJbkWbQe-L7SYXv80jzTYe4fcdacQdt7zxMCMaxx1pc32dnErYh0jU7TcP2Wb8Vd9nxuImMz4AVxcr9Vy8cxkzYjM4rZetMrcEPWHy_"/>
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-black/70 backdrop-blur-md text-white border border-white/20">Custom Residential</span>
+</div>
+</div>
+<div class="p-7 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between text-xs text-gray-400 mb-2 font-mono">
+<span>Completed Build</span>
+<span>Turnkey Framing &amp; Masonry</span>
+</div>
+<h3 class="text-xl font-bold text-white group-hover:text-brand-amber transition-colors">
+                  The Modern Canadian Stone Estate
+                </h3>
+<p class="text-xs text-gray-300 mt-2.5 leading-relaxed">
+                  Architectural residential build featuring custom Canadian cut stone facade, triple-pane structural dark window assemblies, exposed timber overhangs, and precision interior framing.
+                </p>
+</div>
+<div class="mt-6 pt-4 border-t border-[#26352c] flex items-center justify-between text-xs text-brand-amber font-semibold">
+<span>View Scope Details</span>
+<svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="group bg-[#161d19] rounded-3xl overflow-hidden border border-[#26352c] transition-all hover:border-brand-amber/60 flex flex-col">
+<div class="relative overflow-hidden aspect-[16/10]">
+<img alt="Mid-rise multi-story commercial and residential development in progress by Great Canadian Construction team" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida/AEtjO1V6nr-e4jIXm-xj5PlyRYFLlEhbl-B3-gKMXN9GJAwylBd5JH4b2TAnf2ngEiBpujtPDfu8BvmfETT--XcxAr7D1QI1TEGnSAMkgRCKdzeLum7lxkRirdbUKTTbyDDjgu9Pt4mcvpvuvHs54rj_10wqLskESOVuVfTPb--XTPdsN6jXG2R7X5JcYuATIk3vPLJ3mQxq-S6jgcSaAAI_qZitjD45dONz3u5FH804HUkDBwgMwIAcQw-GipE"/>
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-black/70 backdrop-blur-md text-white border border-white/20">Commercial &amp; Multi-Unit</span>
+</div>
+</div>
+<div class="p-7 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between text-xs text-gray-400 mb-2 font-mono">
+<span>On-Schedule Execution</span>
+<span>Steel &amp; Concrete Frame</span>
+</div>
+<h3 class="text-xl font-bold text-white group-hover:text-brand-amber transition-colors">
+                  Urban Commercial &amp; Residential Complex
+                </h3>
+<p class="text-xs text-gray-300 mt-2.5 leading-relaxed">
+                  Full general contracting oversight for a multi-story mid-rise development, coordinating structural reinforced concrete, curtain-wall glazing, and full trade logistics.
+                </p>
+</div>
+<div class="mt-6 pt-4 border-t border-[#26352c] flex items-center justify-between text-xs text-brand-amber font-semibold">
+<span>View Scope Details</span>
+<svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Featured Projects Section -->
+<!-- BEGIN: Transparent Pricing & Estimates Section -->
+<section class="py-16 lg:py-24 bg-[#fbfbf9]" data-purpose="pricing-tiers" id="pricing">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center max-w-xl mx-auto mb-16">
+<div class="text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">
+            • Honest Pricing
+          </div>
+<h2 class="text-3xl sm:text-4xl font-extrabold text-brand-charcoal tracking-tight">
+            Professional services with honest pricing
+          </h2>
+<p class="text-xs sm:text-sm text-gray-600 mt-3">
+            Predictable, transparent estimating without unexpected mid-project price spikes. Select the contracting scope that aligns with your property goals.
+          </p>
+</div>
+<!-- 2 Large Pricing Cards matching the Electrio structure -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+<!-- Pricing Option 1: Basic Site Audit & Scoping -->
+<div class="bg-white rounded-3xl p-8 sm:p-10 border border-gray-200 shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-6 border-b border-gray-100">
+<div>
+<span class="text-xs font-bold uppercase tracking-wider text-gray-500">Tier 1</span>
+<h3 class="text-2xl font-black text-brand-charcoal mt-1">Site Audit &amp; Scoping</h3>
+</div>
+<span class="px-3 py-1 rounded-full text-[11px] font-bold bg-gray-100 text-gray-700">Pre-Build</span>
+</div>
+<div class="my-6">
+<div class="flex items-baseline gap-1">
+<span class="text-4xl sm:text-5xl font-black text-brand-charcoal tracking-tight">$499</span>
+<span class="text-xs text-gray-500 font-semibold uppercase">/ comprehensive report</span>
+</div>
+<p class="text-xs text-gray-600 mt-2">
+                  Full credited back upon contracting execution. Ideal for property owners assessing feasibility.
+                </p>
+</div>
+<div class="space-y-3 pt-4 text-xs text-gray-700">
+<div class="font-bold text-gray-900 uppercase tracking-wider text-[11px]">Included Deliverables:</div>
+<div class="flex items-center gap-2.5">
+<svg class="w-4 h-4 text-brand-pine shrink-0" fill="currentColor" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path></svg>
+<span>On-site physical inspection &amp; structural review</span>
+</div>
+<div class="flex items-center gap-2.5">
+<svg class="w-4 h-4 text-brand-pine shrink-0" fill="currentColor" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path></svg>
+<span>Ontario municipal zoning and permit pathway verification</span>
+</div>
+<div class="flex items-center gap-2.5">
+<svg class="w-4 h-4 text-brand-pine shrink-0" fill="currentColor" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path></svg>
+<span>Itemized budget model with trade breakdown</span>
+</div>
+<div class="flex items-center gap-2.5">
+<svg class="w-4 h-4 text-brand-pine shrink-0" fill="currentColor" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path></svg>
+<span>Estimated critical path construction timeline</span>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-gray-100">
+<a class="w-full block text-center py-3.5 px-6 rounded-full text-xs font-bold uppercase tracking-wider bg-gray-100 text-brand-charcoal hover:bg-brand-charcoal hover:text-white transition-all" href="#contact">
+                Book Site Audit
+              </a>
+</div>
+</div>
+<!-- Pricing Option 2: Full Turnkey General Contracting (Dark Featured Card) -->
+<div class="bg-brand-cardDark text-white rounded-3xl p-8 sm:p-10 border border-brand-borderDark shadow-2xl flex flex-col justify-between relative overflow-hidden">
+<div class="absolute top-0 right-0 transform translate-x-4 -translate-y-4 w-32 h-32 bg-brand-amber/10 rounded-full blur-2xl"></div>
+<div>
+<div class="flex items-center justify-between pb-6 border-b border-brand-borderDark">
+<div>
+<span class="text-xs font-bold uppercase tracking-wider text-brand-amber">Tier 2 • Most Comprehensive</span>
+<h3 class="text-2xl font-black text-white mt-1">Full Turnkey Contracting</h3>
+</div>
+<span class="px-3 py-1 rounded-full text-[11px] font-bold bg-brand-amber text-black uppercase">Standard</span>
+</div>
+<div class="my-6">
+<div class="flex items-baseline gap-1">
+<span class="text-3xl sm:text-4xl font-black text-white tracking-tight">Milestone Based</span>
+</div>
+<p class="text-xs text-gray-300 mt-2">
+                  Complete single-point accountability. You only pay as confirmed construction phases pass inspection.
+                </p>
+</div>
+<div class="space-y-3 pt-4 text-xs text-gray-200">
+<div class="font-bold text-white uppercase tracking-wider text-[11px]">Included Full Scope:</div>
+<div class="flex items-center gap-2.5">
+<svg class="w-4 h-4 text-brand-amber shrink-0" fill="currentColor" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path></svg>
+<span>Dedicated Master General Contractor &amp; Site Superintendent</span>
+</div>
+<div class="flex items-center gap-2.5">
+<svg class="w-4 h-4 text-brand-amber shrink-0" fill="currentColor" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path></svg>
+<span>Complete management of licensed trades (Electrical, Plumbing, HVAC)</span>
+</div>
+<div class="flex items-center gap-2.5">
+<svg class="w-4 h-4 text-brand-amber shrink-0" fill="currentColor" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path></svg>
+<span>Materials sourcing, logistical deliveries, and debris disposal</span>
+</div>
+<div class="flex items-center gap-2.5">
+<svg class="w-4 h-4 text-brand-amber shrink-0" fill="currentColor" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path></svg>
+<span>Full Ontario statutory warranty &amp; structural handover guarantee</span>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-brand-borderDark">
+<a class="w-full block text-center py-3.5 px-6 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-amber text-brand-charcoal hover:bg-yellow-400 transition-all" href="#contact">
+                Request Custom Proposal
+              </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Transparent Pricing & Estimates Section -->
+<!-- BEGIN: Client Testimonials Section -->
+<section class="py-16 lg:py-24 bg-white border-y border-gray-200" data-purpose="client-testimonials">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">
+          • Verified Testimonials
+        </div>
+<h2 class="text-3xl sm:text-4xl font-extrabold text-brand-charcoal tracking-tight mb-12">
+          Success stories from Canadian property owners
+        </h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Testimonial 1 -->
+<div class="bg-[#fbfbf9] p-8 rounded-3xl border border-gray-200 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-1 text-brand-amber mb-4">
+<span>★★★★★</span>
+</div>
+<p class="text-xs text-gray-700 leading-relaxed italic">
+                "Great Canadian Construction handled our full custom home build from ground up. They kept our framing exactly on schedule, dealt with all municipal inspectors with ease, and were totally upfront with costs."
+              </p>
+</div>
+<div class="mt-8 pt-4 border-t border-gray-200">
+<p class="text-sm font-bold text-brand-charcoal">Marco Rossi</p>
+<p class="text-[11px] text-gray-500">Custom Homeowner • Vaughan, ON</p>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-[#fbfbf9] p-8 rounded-3xl border border-gray-200 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-1 text-brand-amber mb-4">
+<span>★★★★★</span>
+</div>
+<p class="text-xs text-gray-700 leading-relaxed italic">
+                "We hired them for a 6,000 sq ft commercial retail fit-out. Their site coordination is top notch. Mon-Sat availability meant issues were resolved immediately before trades ever collided."
+              </p>
+</div>
+<div class="mt-8 pt-4 border-t border-gray-200">
+<p class="text-sm font-bold text-brand-charcoal">David S.</p>
+<p class="text-[11px] text-gray-500">Commercial Property Director • Ontario</p>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="bg-[#fbfbf9] p-8 rounded-3xl border border-gray-200 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-1 text-brand-amber mb-4">
+<span>★★★★★</span>
+</div>
+<p class="text-xs text-gray-700 leading-relaxed italic">
+                "Finding a general contractor who answers the phone promptly and honors the milestone contract is rare. Great Canadian Construction Ltd is as reliable as they come in Ontario."
+              </p>
+</div>
+<div class="mt-8 pt-4 border-t border-gray-200">
+<p class="text-sm font-bold text-brand-charcoal">Elena Bouchard</p>
+<p class="text-[11px] text-gray-500">Structural Addition Client</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Client Testimonials Section -->
+<!-- BEGIN: FAQ Accordion Section -->
+<section class="py-16 lg:py-24 bg-brand-charcoal text-white" data-purpose="faq-section" id="faq">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Left Column -->
+<div class="lg:col-span-5">
+<div class="text-xs font-bold uppercase tracking-widest text-brand-amber mb-2">
+              • FAQ
+            </div>
+<h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white mb-4">
+              Frequently asked questions
+            </h2>
+<p class="text-xs sm:text-sm text-gray-400 leading-relaxed mb-8">
+              Everything you need to know about our general contracting process, building permits, timeline commitments, and Canadian construction warranties.
+            </p>
+<div class="p-6 rounded-2xl bg-[#17201a] border border-[#26352c]">
+<h4 class="text-sm font-bold text-white mb-1">Need immediate project scoping?</h4>
+<p class="text-xs text-gray-400 mb-4">Speak directly with our project management desk Monday through Saturday from 7:00 AM to 7:00 PM.</p>
+<a class="inline-flex items-center gap-2 text-xs font-bold text-brand-amber hover:underline" href="tel:+19058560444">
+<span>Call (905) 856-0444</span>
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+</div>
+<!-- Right Column: Accordion List -->
+<div class="lg:col-span-7 space-y-4">
+<!-- FAQ 1 -->
+<div class="faq-card bg-[#161d19] rounded-2xl border border-[#27372d] overflow-hidden">
+<button class="faq-toggle w-full px-6 py-5 text-left flex items-center justify-between text-white hover:text-brand-amber focus:outline-none transition-colors" type="button">
+<span class="text-sm sm:text-base font-bold pr-4">Are you fully licensed and insured across Ontario?</span>
+<span class="faq-icon text-xl font-light text-brand-amber shrink-0">+</span>
+</button>
+<div class="faq-content hidden px-6 pb-6 text-xs sm:text-sm text-gray-300 leading-relaxed border-t border-[#27372d]/60 pt-4">
+                Yes. Great Canadian Construction Ltd carries full commercial general liability insurance, WSIB clearance for all on-site personnel, and works in strict compliance with the Ontario Building Code (OBC).
+              </div>
+</div>
+<!-- FAQ 2 -->
+<div class="faq-card bg-[#161d19] rounded-2xl border border-[#27372d] overflow-hidden">
+<button class="faq-toggle w-full px-6 py-5 text-left flex items-center justify-between text-white hover:text-brand-amber focus:outline-none transition-colors" type="button">
+<span class="text-sm sm:text-base font-bold pr-4">Who handles building permits and municipal approvals?</span>
+<span class="faq-icon text-xl font-light text-brand-amber shrink-0">+</span>
+</button>
+<div class="faq-content hidden px-6 pb-6 text-xs sm:text-sm text-gray-300 leading-relaxed border-t border-[#27372d]/60 pt-4">
+                We handle the complete permit acquisition process from start to finish. Our team coordinates with structural engineers and city planning departments to ensure all documentation is approved before breaking ground.
+              </div>
+</div>
+<!-- FAQ 3 -->
+<div class="faq-card bg-[#161d19] rounded-2xl border border-[#27372d] overflow-hidden">
+<button class="faq-toggle w-full px-6 py-5 text-left flex items-center justify-between text-white hover:text-brand-amber focus:outline-none transition-colors" type="button">
+<span class="text-sm sm:text-base font-bold pr-4">How do milestone payments and budget protection work?</span>
+<span class="faq-icon text-xl font-light text-brand-amber shrink-0">+</span>
+</button>
+<div class="faq-content hidden px-6 pb-6 text-xs sm:text-sm text-gray-300 leading-relaxed border-t border-[#27372d]/60 pt-4">
+                We utilize milestone-driven contracts. Invoices are triggered strictly upon the successful completion and inspection of predefined construction phases (e.g., foundation, framing, rough-ins, finishes), preventing unexpected cost creep.
+              </div>
+</div>
+<!-- FAQ 4 -->
+<div class="faq-card bg-[#161d19] rounded-2xl border border-[#27372d] overflow-hidden">
+<button class="faq-toggle w-full px-6 py-5 text-left flex items-center justify-between text-white hover:text-brand-amber focus:outline-none transition-colors" type="button">
+<span class="text-sm sm:text-base font-bold pr-4">Can you work with our existing architect or designer?</span>
+<span class="faq-icon text-xl font-light text-brand-amber shrink-0">+</span>
+</button>
+<div class="faq-content hidden px-6 pb-6 text-xs sm:text-sm text-gray-300 leading-relaxed border-t border-[#27372d]/60 pt-4">
+                Absolutely. We frequently collaborate with external architects, interior designers, and structural engineers. We provide practical constructability reviews to optimize material efficiency while honoring the original design intent.
+              </div>
+</div>
+<!-- FAQ 5 -->
+<div class="faq-card bg-[#161d19] rounded-2xl border border-[#27372d] overflow-hidden">
+<button class="faq-toggle w-full px-6 py-5 text-left flex items-center justify-between text-white hover:text-brand-amber focus:outline-none transition-colors" type="button">
+<span class="text-sm sm:text-base font-bold pr-4">What warranty is provided upon project handover?</span>
+<span class="faq-icon text-xl font-light text-brand-amber shrink-0">+</span>
+</button>
+<div class="faq-content hidden px-6 pb-6 text-xs sm:text-sm text-gray-300 leading-relaxed border-t border-[#27372d]/60 pt-4">
+                All structural work, building envelopes, and finished installations are backed by our multi-year statutory contractor warranty, alongside manufacturer warranties for all installed mechanicals and architectural components.
+              </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: FAQ Accordion Section -->
+<!-- BEGIN: Contact Terminal & CTA Section -->
+<section class="py-16 lg:py-24 bg-[#fbfbf9]" data-purpose="contact-and-estimate-request" id="contact">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Outer Card Box -->
+<div class="bg-white rounded-3xl border border-gray-200 overflow-hidden shadow-xl grid grid-cols-1 lg:grid-cols-12">
+<!-- Contact Details / Working Hours Column -->
+<div class="lg:col-span-5 bg-brand-charcoal text-white p-8 sm:p-12 flex flex-col justify-between">
+<div>
+<span class="text-xs font-bold uppercase tracking-widest text-brand-amber">Direct Contact</span>
+<h3 class="text-2xl sm:text-3xl font-extrabold text-white mt-2 mb-6">
+                Start your construction project with confidence.
+              </h3>
+<p class="text-xs sm:text-sm text-gray-300 leading-relaxed mb-8">
+                Reach out to our project management desk to discuss your upcoming residential custom home, commercial space, or structural addition.
+              </p>
+<!-- Business Info Specs -->
+<div class="space-y-6 text-xs sm:text-sm">
+<!-- Phone -->
+<div class="flex items-start gap-4">
+<div class="p-2.5 rounded-xl bg-brand-pine text-brand-amber shrink-0">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<div>
+<p class="font-bold text-white">Direct Phone</p>
+<a class="text-brand-amber hover:underline text-sm font-semibold mt-0.5 block" href="tel:+19058560444">+1 (905) 856-0444</a>
+<span class="text-[11px] text-gray-400">Immediate estimator dispatch</span>
+</div>
+</div>
+<!-- Operating Hours -->
+<div class="flex items-start gap-4">
+<div class="p-2.5 rounded-xl bg-brand-pine text-brand-amber shrink-0">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<div>
+<p class="font-bold text-white">Working Hours</p>
+<p class="text-gray-300 mt-0.5">Monday – Saturday: 7:00 AM – 7:00 PM</p>
+<p class="text-gray-400 text-xs">Sunday: Closed</p>
+</div>
+</div>
+<!-- Google Maps Verification -->
+<div class="flex items-start gap-4">
+<div class="p-2.5 rounded-xl bg-brand-pine text-brand-amber shrink-0">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<div>
+<p class="font-bold text-white">Location &amp; Coverage</p>
+<p class="text-gray-300 mt-0.5">Serving Ontario &amp; Surrounding Regions</p>
+<a class="inline-flex items-center gap-1 text-xs text-brand-amber hover:underline mt-1 font-semibold" href="https://maps.app.goo.gl/JFmQjVtfaMKi3FRt6" rel="noopener noreferrer" target="_blank">
+<span>View on Google Maps</span>
+<svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Badge inside info card -->
+<div class="mt-8 pt-6 border-t border-[#26352c] text-xs text-gray-400 flex items-center justify-between">
+<span>Great Canadian Construction Ltd</span>
+<span class="text-brand-amber">Registered Contractor</span>
+</div>
+</div>
+<!-- Quick Estimate Intake Form -->
+<div class="lg:col-span-7 p-8 sm:p-12">
+<h3 class="text-xl sm:text-2xl font-bold text-brand-charcoal mb-2">Request an Estimate &amp; Consultation</h3>
+<p class="text-xs text-gray-500 mb-8">Fill in your basic project criteria and a lead superintendent will respond within 24 business hours.</p>
+<form action="#contact" class="space-y-4" id="estimateForm" method="POST">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1.5" for="fullName">Your Full Name</label>
+<input class="w-full text-xs rounded-xl border-gray-300 py-3 px-4 focus:border-brand-pine focus:ring-brand-pine bg-gray-50" id="fullName" name="fullName" placeholder="e.g. Robert Smith" required="" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1.5" for="phone">Phone Number</label>
+<input class="w-full text-xs rounded-xl border-gray-300 py-3 px-4 focus:border-brand-pine focus:ring-brand-pine bg-gray-50" id="phone" name="phone" placeholder="(905) 000-0000" required="" type="tel"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1.5" for="email">Email Address</label>
+<input class="w-full text-xs rounded-xl border-gray-300 py-3 px-4 focus:border-brand-pine focus:ring-brand-pine bg-gray-50" id="email" name="email" placeholder="name@domain.ca" required="" type="email"/>
+</div>
+<div>
+<label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1.5" for="projectType">Project Type</label>
+<select class="w-full text-xs rounded-xl border-gray-300 py-3 px-4 focus:border-brand-pine focus:ring-brand-pine bg-gray-50" id="projectType" name="projectType">
+<option>Custom Residential Build</option>
+<option>Commercial Development / Fit-Out</option>
+<option>Structural Framing &amp; Addition</option>
+<option>Complete Home Renovation</option>
+<option>Site Audit / Consultation Only</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1.5" for="message">Project Scope / Location Details</label>
+<textarea class="w-full text-xs rounded-xl border-gray-300 py-3 px-4 focus:border-brand-pine focus:ring-brand-pine bg-gray-50" id="message" name="message" placeholder="Briefly describe square footage, location, blueprints available, or timeline goals..." rows="4"></textarea>
+</div>
+<div class="pt-2">
+<button class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-charcoal text-white hover:bg-brand-pine transition-all shadow-md" type="submit">
+                  Submit Estimate Request
+                </button>
+</div>
+<p class="text-[11px] text-gray-400 mt-3">
+                * We value your privacy. Your information is strictly utilized to provide contractor estimates and scope consultations.
+              </p>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Contact Terminal & CTA Section -->
+</main>
+<!-- BEGIN: Site Footer -->
+<footer class="bg-brand-charcoal text-white border-t border-brand-borderDark pt-16 pb-12" data-purpose="page-footer">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Top Row: Logo, Summary, Nav Columns -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-brand-borderDark">
+<!-- Company Bio -->
+<div class="lg:col-span-2 space-y-4">
+<div class="w-56">
+<svg class="w-full h-auto" fill="none" viewbox="0 0 280 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 36L24 12L36 36H30L24 23L18 36H12Z" fill="#34d399"></path>
+<path d="M24 16L27 24H21L24 16Z" fill="#d97706"></path>
+<path d="M24 8L26.5 13H21.5L24 8Z" fill="#34d399"></path>
+<path d="M6 36H42V38H6V36Z" fill="#34d399"></path>
+<text fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-size="15" font-weight="800" letter-spacing="1.2" x="50" y="24">GREAT CANADIAN</text>
+<text fill="#9ca3af" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="600" letter-spacing="2.8" x="50.5" y="37">CONSTRUCTION LTD</text>
+</svg>
+</div>
+<p class="text-xs text-gray-400 max-w-sm leading-relaxed">
+            Professional general contracting services for residential homes, commercial developments, and structural retrofits throughout Ontario, Canada.
+          </p>
+<div class="pt-2 text-xs text-gray-400">
+<p><span class="text-white font-semibold">Hours:</span> Mon–Sat 7:00 AM – 7:00 PM</p>
+<p><span class="text-white font-semibold">Sunday:</span> Closed</p>
+</div>
+</div>
+<!-- Quick Links -->
+<div>
+<h4 class="text-xs font-bold uppercase tracking-widest text-brand-amber mb-4">Navigation</h4>
+<ul class="space-y-2.5 text-xs text-gray-400">
+<li><a class="hover:text-white transition-colors" href="#home">Home</a></li>
+<li><a class="hover:text-white transition-colors" href="#about">About Us</a></li>
+<li><a class="hover:text-white transition-colors" href="#services">Contracting Services</a></li>
+<li><a class="hover:text-white transition-colors" href="#process">Construction Process</a></li>
+<li><a class="hover:text-white transition-colors" href="#projects">Featured Builds</a></li>
+</ul>
+</div>
+<!-- Services Links -->
+<div>
+<h4 class="text-xs font-bold uppercase tracking-widest text-brand-amber mb-4">Core Disciplines</h4>
+<ul class="space-y-2.5 text-xs text-gray-400">
+<li><a class="hover:text-white transition-colors" href="#services">Custom Framing</a></li>
+<li><a class="hover:text-white transition-colors" href="#services">Commercial Fit-Outs</a></li>
+<li><a class="hover:text-white transition-colors" href="#services">Masonry &amp; Facades</a></li>
+<li><a class="hover:text-white transition-colors" href="#services">Structural Renovations</a></li>
+<li><a class="hover:text-white transition-colors" href="#pricing">Site Audit Estimates</a></li>
+</ul>
+</div>
+<!-- Direct Contact & Map -->
+<div>
+<h4 class="text-xs font-bold uppercase tracking-widest text-brand-amber mb-4">Ontario Office</h4>
+<ul class="space-y-2.5 text-xs text-gray-400">
+<li>
+<a class="text-white font-bold hover:text-brand-amber transition-colors" href="tel:+19058560444">
+                (905) 856-0444
+              </a>
+</li>
+<li>
+<a class="hover:text-brand-amber transition-colors inline-flex items-center gap-1" href="https://maps.app.goo.gl/JFmQjVtfaMKi3FRt6" rel="noopener noreferrer" target="_blank">
+<span>Google Maps Profile</span>
+<svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</li>
+<li class="pt-2 text-[11px] text-gray-500">
+              Ontario Building Code Verified Contractor
+            </li>
+</ul>
+</div>
+</div>
+<!-- Bottom Copyright & Legal -->
+<div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
+<p>© 2026 Great Canadian Construction Ltd. All rights reserved.</p>
+<div class="flex items-center space-x-6 text-[11px]">
+<a class="hover:text-gray-400" href="#privacy">Privacy Policy</a>
+<a class="hover:text-gray-400" href="#terms">Terms of Contracting</a>
+<a class="text-brand-amber hover:underline" href="tel:+19058560444">+1 (905) 856-0444</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- END: Site Footer -->
+<!-- JavaScript: Interactivity & Accordion Handling -->
+<script data-purpose="page-interactions">
+    document.addEventListener('DOMContentLoaded', () => {
+      // Mobile Navigation Menu Toggle
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+      if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileNavLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+          });
+        });
+      }
+
+      // FAQ Accordion Toggle Interaction
+      const faqToggles = document.querySelectorAll('.faq-toggle');
+      faqToggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+          const content = toggle.nextElementSibling;
+          const icon = toggle.querySelector('.faq-icon');
+          const isCurrentlyOpen = !content.classList.contains('hidden');
+
+          // Close all other FAQs in the container
+          document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+          document.querySelectorAll('.faq-icon').forEach(i => i.textContent = '+');
+
+          // Toggle current
+          if (!isCurrentlyOpen) {
+            content.classList.remove('hidden');
+            if (icon) icon.textContent = '−';
+          }
+        });
+      });
+
+      // Smooth scrolling behavior offset for sticky header
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          const targetId = this.getAttribute('href');
+          if (targetId.length > 1) {
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              e.preventDefault();
+              const headerOffset = 80;
+              const elementPosition = targetElement.getBoundingClientRect().top;
+              const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+              });
+            }
+          }
+        });
+      });
+    });
+  </script>
+</body></html>
